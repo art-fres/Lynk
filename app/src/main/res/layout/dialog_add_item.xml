@@ -3,39 +3,45 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#1F2A37"
+    >
+
+
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="390dp"
         android:layout_height="wrap_content"
-        android:text="Добавить новый элемент"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        android:text="           Введите название"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-    <!-- Замена TextInputLayout на LinearLayout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Название"
-            android:textSize="14sp" />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/etTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="18sp"
             android:hint="Введите название"
             android:background="@drawable/edit_text_background" />
 
     </LinearLayout>
 
-    <!-- Замена второго TextInputLayout -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,14 +52,66 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Дата"
-            android:textSize="14sp" />
+            android:textColor="@color/white"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/etDate"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="18sp"
             android:hint="дд.мм.гггг"
-            android:inputType="number" />
+            android:textColor="@color/white"
+            android:inputType="text" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стоимость"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etCost"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:hint="Введите сумму"
+            android:textColor="@color/white"
+            android:inputType="numberDecimal" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Категория подписки"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_background"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp" />
 
     </LinearLayout>
 
@@ -64,6 +122,7 @@
 
         <Button
             android:id="@+id/btnCancel"
+            android:background="@drawable/rounded_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -72,6 +131,7 @@
 
         <Button
             android:id="@+id/btnAdd"
+            android:background="@drawable/rounded_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
